@@ -10,6 +10,10 @@
 		CE6D78DB23EDA1680069F64B /* HRAutoreleasePool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D78D123EDA1680069F64B /* HRAutoreleasePool.framework */; };
 		CE6D78E023EDA1680069F64B /* HRAutoreleasePoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D78DF23EDA1680069F64B /* HRAutoreleasePoolTests.m */; };
 		CE6D78E223EDA1680069F64B /* HRAutoreleasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6D78D423EDA1680069F64B /* HRAutoreleasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE6D78ED23EDA4830069F64B /* AutoreleasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6D78EB23EDA4830069F64B /* AutoreleasePool.h */; };
+		CE6D78EE23EDA4830069F64B /* AutoreleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D78EC23EDA4830069F64B /* AutoreleasePool.m */; };
+		CE6D78F723F5A4F00069F64B /* autorelease_pool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D78F523F5A4F00069F64B /* autorelease_pool.m */; };
+		CE6D78FB23F5AC1F0069F64B /* autorelease_pool_stack.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D78F923F5AC1F0069F64B /* autorelease_pool_stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,12 @@
 		CE6D78DA23EDA1680069F64B /* HRAutoreleasePoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HRAutoreleasePoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6D78DF23EDA1680069F64B /* HRAutoreleasePoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRAutoreleasePoolTests.m; sourceTree = "<group>"; };
 		CE6D78E123EDA1680069F64B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6D78EB23EDA4830069F64B /* AutoreleasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoreleasePool.h; sourceTree = "<group>"; };
+		CE6D78EC23EDA4830069F64B /* AutoreleasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoreleasePool.m; sourceTree = "<group>"; };
+		CE6D78F423F5A4F00069F64B /* autorelease_pool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = autorelease_pool.h; sourceTree = "<group>"; };
+		CE6D78F523F5A4F00069F64B /* autorelease_pool.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = autorelease_pool.m; sourceTree = "<group>"; };
+		CE6D78F823F5AC1F0069F64B /* autorelease_pool_stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = autorelease_pool_stack.h; sourceTree = "<group>"; };
+		CE6D78F923F5AC1F0069F64B /* autorelease_pool_stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autorelease_pool_stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,12 @@
 			children = (
 				CE6D78D423EDA1680069F64B /* HRAutoreleasePool.h */,
 				CE6D78D523EDA1680069F64B /* Info.plist */,
+				CE6D78EB23EDA4830069F64B /* AutoreleasePool.h */,
+				CE6D78EC23EDA4830069F64B /* AutoreleasePool.m */,
+				CE6D78F423F5A4F00069F64B /* autorelease_pool.h */,
+				CE6D78F523F5A4F00069F64B /* autorelease_pool.m */,
+				CE6D78F823F5AC1F0069F64B /* autorelease_pool_stack.h */,
+				CE6D78F923F5AC1F0069F64B /* autorelease_pool_stack.m */,
 			);
 			path = HRAutoreleasePool;
 			sourceTree = "<group>";
@@ -94,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6D78E223EDA1680069F64B /* HRAutoreleasePool.h in Headers */,
+				CE6D78ED23EDA4830069F64B /* AutoreleasePool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6D78F723F5A4F00069F64B /* autorelease_pool.m in Sources */,
+				CE6D78FB23F5AC1F0069F64B /* autorelease_pool_stack.m in Sources */,
+				CE6D78EE23EDA4830069F64B /* AutoreleasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,11 +240,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -281,11 +302,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -335,6 +357,7 @@
 		CE6D78E623EDA1680069F64B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G64QSZB6CZ;
@@ -358,6 +381,7 @@
 		CE6D78E723EDA1680069F64B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G64QSZB6CZ;
@@ -381,6 +405,7 @@
 		CE6D78E923EDA1680069F64B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G64QSZB6CZ;
 				INFOPLIST_FILE = HRAutoreleasePoolTests/Info.plist;
@@ -398,6 +423,7 @@
 		CE6D78EA23EDA1680069F64B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G64QSZB6CZ;
 				INFOPLIST_FILE = HRAutoreleasePoolTests/Info.plist;
